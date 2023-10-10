@@ -1,0 +1,25 @@
+﻿<Window x:Class="P04WeatherForecastAPI.Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:P04WeatherForecastAPI.Client"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="600">
+    <DockPanel>
+        <StackPanel Width="150" DockPanel.Dock="Left">
+            <Label Content="City:" ></Label>
+            <TextBox x:Name="txtCity"></TextBox>
+            <Button x:Name="btnSearch" Content="Search" Click="btnSearch_Click"></Button>
+            <ListBox x:Name="lbData" DisplayMemberPath="LocalizedName" SelectionChanged="lbData_SelectionChanged"></ListBox>
+        </StackPanel>
+        <StackPanel>
+            <Label x:Name="lblCityName" HorizontalAlignment="Center" Content="City: "></Label>
+            <Label x:Name="lblTemperatureValue" HorizontalAlignment="Center" Content=""></Label>
+            <Label x:Name="lblHistorical6hTemp" HorizontalAlignment="Center" Content=""></Label>
+            <Label x:Name="lblHistorical24hTemp" HorizontalAlignment="Center" Content=""></Label>
+            <Label x:Name="lblNearCities" HorizontalAlignment="Center" Content=""></Label>
+            <Label x:Name="lblIndices" HorizontalAlignment="Center" Content=""></Label>
+        </StackPanel>
+    </DockPanel>
+</Window>
